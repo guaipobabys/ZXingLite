@@ -29,7 +29,7 @@ versions.espresso = "3.0.2"
 //zxing
 versions.zxing = "3.3.3"
 
-versions.easypermissions = "2.0.1"
+versions.easypermissions = "3.0.0"
 
 
 

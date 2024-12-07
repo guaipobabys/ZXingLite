@@ -29,6 +29,20 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    def sdkFlavorDimensions = "sdk-zxing-lite"
+
+    libraryVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${sdkFlavorDimensions}" +
+                    "-${app_version.versionName}" +
+                    "-${currTime()}-${buildType.name}.aar"
+        }
+    }
+}
+
+static def currTime() {
+    return new Date().format("yyyyMMdd")
 }
 
 //task javadoc(type: Javadoc) {
